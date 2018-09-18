@@ -4,7 +4,7 @@ $(function () {
     setTimeout('$(".hm_btn").fadeIn(1000);', 2100);
 
     $("#b11").click(function () {
-        var phone=document.getElementById("phone").value;
+        var name=document.getElementById("name").value;
         var studentnumber=document.getElementById("studentnumber").value;
         var query = new AV.Query('forms');
         query.equalTo('studentnumber',studentnumber);
@@ -301,14 +301,14 @@ $(function () {
             $('#fs').addClass("f12");
         }
 
-        var phone=document.getElementById("phone").value;
+        var name=document.getElementById("name").value;
         var studentnumber=document.getElementById("studentnumber").value;
         var Forms = AV.Object.extend("forms");
         var formObject = new Forms();
         formObject.save({
             score:sc,
             check:1,
-            phone:phone,
+            name:name,
             studentnumber:studentnumber,
         }, {
             success: function(object) {
