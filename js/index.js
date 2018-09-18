@@ -306,7 +306,7 @@ $(function () {
         var Forms = AV.Object.extend("forms");
         var formObject = new Forms();
         formObject.save({
-            score:sc;
+            score:sc,
             check:1,
             phone:phone,
             studentnumber:studentnumber,
