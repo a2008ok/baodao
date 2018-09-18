@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>SYSU</title>
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <meta name="author" content="" />
+    <meta name="renderer" content="webkit">
+    <meta content='target-densitydpi=device-dpi, width=640' name='viewport'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="format-detection" content="telephone=no">  
+    <link href="style/css.css"rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+    <script src=".\js\av-min.js"></script>
+    <script src=".\js\initLeanCloud.js"></script>
+    <script>
+        /*不同分辨率手机加载*/
+        var userScalable = "no";
+        var ins = "";
+        (function () {
+            if (window.devicePixelRatio === 1.5) {
+                userScalable = "yes";
+                ins = "initial-scale=0.5"
+            }
+            var text = "<meta content='" + ins + ", target-densitydpi=device-dpi, width=640,user-scalable=" + userScalable + "' name='viewport'>";
+            document.write(text);
+        })();
+    </script>
+</head>
+<body>
+    <div id="index" class="w640">  
+        <div id="h1" style="display:none;">
+            <header>
+                <div class="title">
+                    <img src="images/title_text.png" alt="">
+                </div>
+            </header>
+            <div class="hm_text" style="display:none;">
+                
+            </div>
+        </div>
+        <div class="hm_text01" style="display:none;"><img src="images/text01.png" alt=""></div>
+        <div class="hm_btn" style="display:none;">
+            <form id="Input">
+                <span>学号：</span>
+                <span><input id="studentnumber" type="text" name="studentnumber" ></span>
+                </br>
+                </br>
+                <span>手机：</span>
+                <span><input id="phone" type="text" name="phone" ></span>
+            </form>
+            </br>
+            </br>
+            <div class="btn_bg"><a id="b11" href="javascript:void(0);">开始答题</a></div>
+        </div>
+    </div>
+    <div id="answer" class="w640" style="display:none;">
+        <header>
+            <div class="title">               
+            </div>
+        </header>
+        <div id="q1">           
+            <div class="content_tl"> 
+                <span id="r1" class="right" style="display:none;"></span>
+                <span id="w1" class="wrong" style="display:none;"></span>    
+                <p class="content_tl_t">1、以下哪一首是中国共产主义青年团团歌？</p>
+                </br>
+                <p><span><input id="rd1_1" name="rd1" type="radio" value="false"></span><label for="rd1_1">A.《我们是光荣的共青团员》</label></p>
+                <p><span><input id="rd1_2" name="rd1" type="radio" value="false"></span><label for="rd1_2">B.《中国共青团之歌》</label></p>
+                <p><span><input id="rd1_3" name="rd1" type="radio" value="true"></span><label for="rd1_3">C.《光荣啊，中国共青团》</label></p>            
+                <div class="clear"></div>
+             </div>
+            <div id="msg1" class="no_choice" style="display:none;">您还没选择！</div>
+            <div class="enter_btn"><a id="b1" href="javascript:void(0);">确定</a></div>
+        </div>
+       
+
+        <div id="q2" style="display:none;">
+            <div class="content_tl">
+                <span id="r2" class="right" style="display:none;"></span>
+                <span id="w2" class="wrong" style="display:none;"></span>    
+                <p class="content_tl_t">2、共青团的第一次全国代表大会在以下的哪个城市召开？</p>
+                </br>
+                <p class="p_left"><span><input id="rd2_1" name="rd2" type="radio" value="false"></span><label for="rd2_1">A.上海</label></p>
+                <p class="p_left"><span><input id="rd2_2" name="rd2" type="radio" value="false"></span><label for="rd2_2">B.北京</label></p>
+                <p class="p_left"><span><input id="rd2_3" name="rd2" type="radio" value="true"></span><label for="rd2_3">C.广州</label></p>
+                <p class="p_left"><span><input id="rd2_4" name="rd2" type="radio" value="false"></span><label for="rd2_4">D.延安</label></p>             
+                <div class="clear"></div>
+            </div>
+            <div id="msg2" class="no_choice" style="display:none;">您还没选择！</div>
+            <div class="enter_btn"><a id="b2" href="javascript:void(0);">确定</a></div>
+        </div>
+
+        <div id="q3" style="display:none;">
+            <div class="content_tl">
+                <span id="r3" style="display:none;" class="right"></span>
+                <span id="w3" style="display:none;" class="wrong"></span>    
+                <p class="content_tl_t">3、绿色团员证封面的团徽上的字样是以下哪项？</p>
+                </br>
+                <p><span><input id="rd3_1" name="rd3" type="radio" value="true"></span><label for="rd3_1">A.“中国共青团”</label></p>
+                <p><span><input id="rd3_2" name="rd3" type="radio" value="false"></span><label for="rd3_2">B.“共青团中央”</label></p>
+                <p><span><input id="rd3_3" name="rd3" type="radio" value="false"></span><label for="rd3_3">C.“共产主义青年团”</label></p>                
+                <div class="clear"></div>
+            </div>
+            <div id="msg3" class="no_choice" style="display:none;">您还没选择！</div>
+            <div class="enter_btn"><a id="b3" href="javascript:void(0);">确定</a></div>
+        </div>
+
+        <div id="q4" style="display:none;">
+            <div class="content_tl">
+                <span id="r4" style="display:none;" class="right"></span>
+                <span id="w4" style="display:none;" class="wrong"></span>
+                <p class="subject_t">4、以下哪项是共青团的组织原则？</p>
+                </br>
+                <p><span><input id="rd4_1" name="rd4" type="radio" value="false"></span><label for="rd4_1">A.分权原则</label></p>
+                <p><span><input id="rd4_2" name="rd4" type="radio" value="true"></span><label for="rd4_2">B.民主集中制</label></p>
+                <p><span><input id="rd4_3" name="rd4" type="radio" value="false"></span><label for="rd4_3">C.部门化原则</label></p>
+                <div class="clear"></div>
+             </div>
+            <div id="msg4" class="no_choice" style="display:none;">您还没选择！</div>
+            <div class="enter_btn"><a id="b4" href="javascript:void(0);">确定</a></div>
+        </div>
+
+        <div id="q5" style="display:none;">
+            <div class="content_tl">
+                <span id="r5" style="display:none;" class="right"></span>
+                <span id="w5" style="display:none;" class="wrong"></span>
+                <p class="content_tl_t">5、团的全国代表大会每（ ）年举办一次？</p>
+                </br>
+                <p class="p_left"><span><input id="rd5_1" name="rd5" type="radio" value="false"></span><label for="rd5_1">A.3</label></p>
+                <p class="p_left"><span><input id="rd5_2" name="rd5" type="radio" value="false"></span><label for="rd5_2">B.4</label></p>
+                <p class="p_left"><span><input id="rd5_3" name="rd5" type="radio" value="true"></span><label for="rd5_3">C.5</label></p>
+                <p class="p_left"><span><input id="rd5_4" name="rd5" type="radio" value="false"></span><label for="rd5_4">D.6</label></p>
+                <div class="clear"></div>
+            </div>
+            <div id="msg5" class="no_choice" style="display:none;">您还没选择！</div>
+            <div class="enter_btn"><a id="b5" href="javascript:void(0);">确定</a></div>
+        </div>
+
+        <div id="q6" style="display:none;">
+            <div class="content_tl">
+                <span id="r6" style="display:none;" class="right"></span>
+                <span id="w6" style="display:none;" class="wrong"></span>
+                <p class="content_tl_t">6、团的全国代表大会闭幕期间，（ ）执行大会决议，领导团的工作。</p>
+                </br>
+                <p><span><input id="rd6_1" name="rd6" type="radio" value="false"></span><label for="rd6_1">A.团的中央常务委员会</label></p>
+                <p><span><input id="rd6_2" name="rd6" type="radio" value="true"></span><label for="rd6_2">B.团的常务委员会</label></p>
+                <p><span><input id="rd6_3" name="rd6" type="radio" value="false"></span><label for="rd6_3">C.团的中央书记处</label></p>
+                <div class="clear"></div>
+            </div>
+            <div id="msg6" class="no_choice" style="display:none;">您还没选择！</div>
+            <div class="enter_btn"><a id="b6" href="javascript:void(0);">确定</a></div>
+        </div>
+
+        <div id="q7" style="display:none;">
+            <div class="content_tl">
+                <span id="r7" style="display:none;" class="right"></span>
+                <span id="w7" style="display:none;" class="wrong"></span>
+                <p class="content_tl_t">7、团员年满（ ）岁，未在团内担任职务，应办理离团手续。</p>
+                </br>
+                <p class="p_left"><span><input id="rd7_1" name="rd7" type="radio" value="false"></span><label for="rd7_1">A.26</label></p>
+                <p class="p_left"><span><input id="rd7_2" name="rd7" type="radio" value="true"></span><label for="rd7_2">B.28</label></p>
+                <p class="p_left"><span><input id="rd7_3" name="rd7" type="radio" value="false"></span><label for="rd7_3">A.30</label></p>
+                <p class="p_left"><span><input id="rd7_4" name="rd7" type="radio" value="false"></span><label for="rd7_4">B.32</label></p>
+                <div class="clear"></div>
+            </div>
+            <div id="msg7" class="no_choice" style="display:none;">您还没选择！</div>
+            <div class="enter_btn"><a id="b7" href="javascript:void(0);">确定</a></div>
+        </div>
+
+        <div id="q8" style="display:none;">
+            <div class="content_tl">
+                <span id="r8" style="display:none;" class="right"></span>
+                <span id="w8" style="display:none;" class="wrong"></span>
+                <p class="content_tl_t">8、共青团旗面呈红色，象征（）</p>
+                </br>
+                <p><span><input id="rd8_1" name="rd8" type="radio" value="true"></span><label for="rd8_1">A.革命胜利</label></p>
+                <p><span><input id="rd8_2" name="rd8" type="radio" value="false"></span><label for="rd8_2">B.青春理想</label></p>
+                <p><span><input id="rd8_3" name="rd8" type="radio" value="false"></span><label for="rd8_3">C.蓬勃生命</label></p>
+                <div class="clear"></div>
+            </div>
+            <div id="msg8" class="no_choice" style="display:none;">您还没选择！</div>
+            <div class="enter_btn"><a id="b8" href="javascript:void(0);">确定</a></div>
+        </div>
+
+        <div id="q9" style="display:none;">
+            <div class="content_tl">
+                <span id="r9" style="display:none;" class="right"></span>
+                <span id="w9" style="display:none;" class="wrong"></span>
+                <p class="content_tl_t">9、团的各级代表大会人选中，女性代表不得少于总体的（ ）</p>
+                </br>
+                <p class="p_left"><span><input id="rd9_1" name="rd9" type="radio" value="true"></span><label for="rd9_1">A.25%</label></p>
+                <p class="p_left"><span><input id="rd9_2" name="rd9" type="radio" value="false"></span><label for="rd9_2">B.30%</label></p>
+                <p class="p_left"><span><input id="rd9_3" name="rd9" type="radio" value="false"></span><label for="rd9_3">A.20%</label></p>
+                <p class="p_left"><span><input id="rd9_4" name="rd9" type="radio" value="false"></span><label for="rd9_4">B.35%</label></p>
+                <div class="clear"></div>
+            </div>
+            <div id="msg9" class="no_choice" style="display:none;">您还没选择！</div>
+            <div class="enter_btn"><a id="b9" href="javascript:void(0);">确定</a></div>
+        </div>
+
+        <div id="q10" style="display:none;">
+            <div class="content_tl">
+                <span id="r10" style="display:none;" class="right"></span>
+                <span id="w10" style="display:none;" class="wrong"></span>
+                <p class="content_tl_t">10、（多选）中国共青团入团的条件是什么?</p>
+                </br>
+                <p><span><input id="cb10_1" name="cb10" type="checkbox" value="true"></span><label for="cb10_1">A.年龄在十四周岁以上，二十八周岁以下的中国青年</label></p>
+                <p><span><input id="cb10_2" name="cb10" type="checkbox" value="true"></span><label for="cb10_2">B.承认团的章程，愿意参加团的一个组织，并在其中积极工作</label></p>
+                <p><span><input id="cb10_3" name="cb10" type="checkbox" value="true"></span><label for="cb10_3">C.执行团的决议</label></p>
+                <p><span><input id="cb10_4" name="cb10" type="checkbox" value="true"></span><label for="cb10_4">D.按期交纳团费</label></p>
+                <div class="clear"></div>
+            </div>
+            <div id="msg10" class="no_choice" style="display:none;">您还没选择！</div>
+            <div class="enter_btn"><a id="b10" href="javascript:void(0);">确定</a></div>
+        </div>
+
+        <div id="q11" style="display:none;">
+            <div class="content_tl">         
+                <span id="r11" style="display:none;" class="right"></span>
+                <span id="w11" style="display:none;" class="wrong"></span>     
+                <p class="content_tl_t">11、（多选）共青团的组织要求是？</p>
+                </br>
+                <p><span><input id="cb11_1" type="checkbox" value="true" name="cb11" /></span><label for="cb11_1">A.坚持党的基本路线不动摇</label></p>
+                <p><span><input id="cb11_2" type="checkbox" value="true" name="cb11" /></span><label for="cb11_2">B.坚持先进性与群众性的统一</label></p>
+                <p><span><input id="cb11_3" type="checkbox" value="true" name="cb11" /></span><label for="cb11_3">C.坚持民主集中制</label></p>
+                <p><span><input id="cb11_4" type="checkbox" value="true" name="cb11" /></span><label for="cb11_4">D.坚持不懈地抓好基层建设</label></p>
+                <div class="clear"></div>
+            </div>
+            <div id="msg11" class="no_choice" style="display:none;">您还没选择！</div>
+            <div class="enter_btn"><a id="b13" href="javascript:void(0);">确定</a></div>
+        </div>
+
+        <div id="q12" style="display:none;">
+            <div class="content_tl">
+                <span id="r12" style="display:none;" class="right"></span>
+                <span id="w12" style="display:none;" class="wrong"></span>
+                <p class="content_tl_t">12、（多选）某村违反相关规定，刻意隐瞒党务、政务、村务，剥夺了村民的知情权，给村民造成了巨大的损失，直接责任者和领导者将会受到怎样的处分？</p>
+                </br>
+                <p class="p_left"><span><input id="cb12_1" type="checkbox" value="true" name="cb12" /></span><label for="cb12_1">A.团旗</label></p>
+                <p class="p_left"><span><input id="cb12_2" type="checkbox" value="true" name="cb12" /></span><label for="cb12_2">B.齿轮</label></p>
+                <p><span><input id="cb12_3" type="checkbox" value="true" name="cb12" /></span><label for="cb12_3">C.麦穗</label></p>
+                <p><span><input id="cb12_4" type="checkbox" value="true" name="cb12" /></span><label for="cb12_4">D.初升的太阳及其光芒</label></p>
+                <p><span><input id="cb12_5" type="checkbox" value="true" name="cb12" /></span><label for="cb12_5">E.写有“中国共青团”五字的绶带</label></p>
+                <div class="clear"></div>
+            </div>
+            <div id="msg12" class="no_choice" style="display:none;">您还没选择！</div>
+            <div class="enter_btn">
+                <a id="b12" href="javascript:void(0);">确定</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="score" class="w640" style="display:none;">
+        <header>
+            <div id="fs"></div>
+        </header>
+        <div class="hm_text02">
+            <p>你是第</p>
+            <p id="paiming"></p>
+            <p>个向团团报到的学生</p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/index.js"></script>    
+
+</body>
+</html>
+
+
+
+
