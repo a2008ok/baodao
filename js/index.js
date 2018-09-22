@@ -3,21 +3,44 @@ $(function () {
     setTimeout('$(".hm_text01").fadeIn(1000);', 1100);
     setTimeout('$(".hm_btn").fadeIn(1000);', 2100);
 
+    function isStuNum(v){
+        var reg=/((1[5678])\d{6})/i;
+        if(reg.test(v)){
+            return true;
+        }else{
+            return false;
+        }
+    };
+
+    function isChinese(o){
+        var reg=/^[\u4E00-\u9FA5]+$/;
+        return reg.test(o);
+    };
+
     $("#b11").click(function () {
         var name=document.getElementById("name").value;
         var studentnumber=document.getElementById("studentnumber").value;
-        var query = new AV.Query('forms');
-        query.equalTo('studentnumber',studentnumber);
-        query.count().then(function (count) {
-            if (count > 0) {
-                alert("该学号已经完成报到了哦，请不要重复报到！");
-            }
-            else {
-                setTimeout('$("#index").fadeOut(100);', 100);
-                setTimeout('$("#answer").fadeIn(1000);', 100);               
-            }
-        }, function (error) {
-        });
+        if (!isStuNum(studentnumber)){
+            alert("请输入正确的学号！");
+        }
+        else if (!isChinese(name)){
+            alert("请输入正确的姓名！");
+        }
+        else{
+            var query = new AV.Query('forms');
+            query.equalTo('studentnumber',studentnumber);
+            query.count().then(function (count) {
+                if (count > 0) {
+                    alert("该学号已经完成报到了哦，请不要重复报到！");
+                }
+                else {
+                    setTimeout('$("#index").fadeOut(100);', 100);
+                    setTimeout('$("#answer").fadeIn(1000);', 100);               
+                }
+            }, function (error) {
+            });
+        };
+        
     });
 
     a1 = a2 = a3 = a4 = a5 = a6 = a7 = a8 = a9 = a10 = a11 = a12 = 0;
